@@ -1,4 +1,4 @@
-name: 'Latest douban activities workflow'
+name: 'Update readme with douban activities'
 author: 'Dong Weiming'
 description: 'Allows you to show your latest douban activities on your github profile or project readme'
 

@@ -7,7 +7,7 @@ Allows you to show your latest douban activities on your github profile or proje
 ### Example Workflow file
 
 ```yaml
-uses: dongweimng/douban-activity-readme@master
+uses: dongweimng/douban-activity-readme@v1
 with:
   uid: YOUR_DOUBAN_USER_ID
   max_count: 5

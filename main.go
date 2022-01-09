@@ -147,6 +147,7 @@ func main() {
 			}
 			ResharedStatus := item.Status.ResharedStatus
 			url = item.Status.SharingURL
+			url = strings.Split(url, "?_i=")[0] // 链接多了一个_i参数，去掉
 			activity = item.Status.Activity
 			var item_ string
 			if ResharedStatus != (ResharedStatus_{}) {

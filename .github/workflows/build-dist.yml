@@ -1,13 +1,7 @@
 name: "build-dist"
 on: # rebuild any branch changes
-  push:
-    paths:
-      - '*'
-      - '**/*'
-      - '!dist/**'
-    branches-ignore:
-      - '*'
-    tags-ignore:
+  create:
+    tag:
       - '*'
 
 jobs:

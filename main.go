@@ -170,8 +170,10 @@ func main() {
 							owner_id, card.ID)
 					}
 					title := item.Status.Text[strings.LastIndex(item.Status.Text, " ")+1:]
-					item_ = fmt.Sprintf("- [收藏 %s的%s](%s) 到 豆列[%s](%s)", card.OwnerName,
+					item_ = fmt.Sprintf("- [收藏 %s的%s](%s) 到 [豆列 %s](%s)", card.OwnerName,
 						origin_title, origin_url, title, url)
+				} else if strings.HasPrefix(activity, "上传") { // 上传
+					activity = fmt.Sprintf("上传 %s", string([]rune(activity)[2:]))
 				} else if strings.HasPrefix(activity, "写了") { // 读书笔记
 					text = []rune(activity)
 					item_ = fmt.Sprintf("- [写了 %s %s 的读书笔记](%s)",

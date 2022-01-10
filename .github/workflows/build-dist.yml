@@ -1,13 +1,7 @@
 name: "build-dist"
 on: # rebuild any branch changes
-  push:
-    paths:
-      - '*'
-      - '**/*'
-      - '!dist/**'
-    branches-ignore:
-      - '*'
-    tags-ignore:
+  create:
+    tag:
       - '*'
 
 jobs:
@@ -43,4 +37,4 @@ jobs:
       - uses: actions/download-artifact@v1
         with:
           name: main-windows-latest
-      - uses: actions-go/update@master
+      - uses: dongweiming/update@master
